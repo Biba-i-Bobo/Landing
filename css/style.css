@@ -1,0 +1,565 @@
+:root {
+    --white: #ffffff;
+    --orange: #FF7143;
+    --orange-hover: #d94d1e;
+    --blue: #5454D4;
+    --blue-hover: #0e0e94;
+    --head-color: #19191B;
+    --text-color: #696871;
+    --light-grey: #EAE9F2;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+menu {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul li {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+legend {
+    color: #000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html, body {
+    background: var(--white);    
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 80px;
+    color: var(--head-color);
+}
+
+h1 {
+    line-height: 1em;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-bottom: 32px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    margin: 0 16px;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+#header .row {
+    height: 88px;
+    align-items: center;
+}
+
+.logo a {
+    background: url('../img/logo.svg') no-repeat;
+    width: 200px;
+    height: 40px;
+    display: block;
+}
+
+.menu {
+    width: calc(100% / 3 - 32px);
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu ul li a {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+    line-height: 2.86em;
+}
+
+.menu ul li a:hover {
+    color: var(--head-color);
+}
+
+.menu ul li a::after {
+    content: "";
+    background: var(--blue);
+    height: 2px;
+    display: block;
+    width: 0;
+    transition: width 0.4s ease-in-out;
+}
+
+.menu ul li:hover a::after {
+    width: 100%;
+}
+
+.button a, .button input {
+    background: var(--orange);
+    width: 100%;
+    height: 44px;
+    color: var(--white);
+    border-radius: 8px;
+    transition: background 0.4s ease-in-out;
+    border: none;
+    font-size: 17px;
+}
+
+.button a {
+    width: 210px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2.2em;
+}
+
+.button a:hover {
+    background: var(--orange-hover);    
+}
+
+.blue a, .blue input {
+    background: var(--blue);
+}
+
+.blue a:hover, .blue input:hover {
+    background: var(--blue-hover);
+}
+
+.hero_text {
+    width: calc(50% - 32px);
+    height: 644px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero_text p {
+    margin-bottom: 32px;
+}
+
+.button_arrow a {
+    background: url('../img/arrow-down.svg') center center no-repeat;
+    width: 44px;
+    height: 44px;
+    display: block;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+}
+
+.hero_3d {
+    width: calc(50% - 32px);
+    position: relative;
+}
+
+.img {
+    position: absolute;
+}
+
+.stand {
+    left: 56px;
+    top: 116px;
+}
+
+.bubble {
+    left: 380px;
+    top: 422px;
+}
+
+.partner {
+    width: 128px;
+    height: 48px;
+}
+
+#piechart {
+    padding: 64px 0;
+}
+
+.piechart_img {
+    width: calc(50% - 32px);
+    position: relative;
+}
+
+.pose-piechart {
+    left: 294px;
+    top: 0;
+}
+
+.piechart {
+    left: 120px;
+    top: 84px;
+}
+
+.chart_text {
+    width: calc(50% - 32px);
+    height: 474px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chart_text p {
+    margin-bottom: 32px;
+}
+
+.chart_text a {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.barchart_img {
+    width: calc(50% - 32px);
+    position: relative;
+}
+
+.barchart {
+    left: 260px;
+    top: 20px;
+}
+
+.pose-barchart {
+    left: 120px;
+    top: 0;
+}
+
+#benefits {
+    padding: 64px 0;
+}
+
+.benefit {
+    width: calc(100% / 3 - 32px);
+    text-align: center;
+}
+
+.benefit img {
+    width: auto;
+    height: 84px;
+    margin-bottom: 24px;
+}
+
+
+
+#plans {
+    margin-bottom: 64px;
+}
+
+#plans h2 {
+    width: calc(50% - 16px);
+    margin-bottom: 64px;
+}
+
+#plans .tarifs_tabs {
+    background: var(--light-grey);
+    width: 346px;
+    height: 58px;
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#plans .tarifs_tabs .tarifs_tabs_title {
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 3.5em;
+    color: var(--head-color);
+    transition: background 0.4s ease-in-out;
+}
+
+
+#plans .tarifs_tabs .tarifs_tabs_title.active {
+    background: var(--blue);
+    color: #ffffff;
+    pointer-events: none;
+}
+
+#plans .tarifs_tabs .tarifs_tabs_title:hover {
+    background: var(--blue-hover);
+    color: #ffffff;
+}
+
+#plans .tarifs_tabs .tarifs_tabs_title.left {
+    border-radius: 8px 0 0 8px;
+}
+
+#plans .tarifs_tabs .tarifs_tabs_title.right {
+    border-radius: 0 8px 8px 0;
+}
+
+#plans .plan {
+    background: var(--light-grey);
+    border-radius: 8px;
+    width: calc(100% / 3 - 32px);
+    padding: 40px 24px;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    transition: margin 0.4s ease-in-out;
+}
+
+#plans .plan:hover {
+    background: var(--orange);
+    color: #ffffff;
+    margin-top: -24px;
+}
+
+#plans .plan .plan_name {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+#plans .plan .price {
+    font-weight: bold;
+    color: var(--head-color);
+    margin-bottom: 24px;
+}
+
+#plans .plan:hover .price {
+    color: #ffffff;
+}
+
+#plans .plan .price span {
+    font-size: 60px;
+}
+
+#plans .plan .price .during {
+    font-size: 28px;
+}
+
+#plans .plan .description {
+    font-family: 'Mulish', sans-serif;
+    font-size: 17px;
+    margin-bottom: 24px;
+}
+
+#plans .plan .button a {
+    background: #ffffff;
+    margin: 0 auto;
+    color: var(--blue);
+}
+
+#plans .plan:hover .button a {
+    background: #ffffff;
+    color: var(--orange);
+}
+
+#contact .form {
+    position: relative;
+    width: calc(100% - 32px);
+}
+
+#contact .order {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    z-index: 100;
+}
+
+#contact h3 {
+    text-align: center;
+}
+
+.input_field, .text_field{
+    margin-bottom: 16spx
+}
+
+.input_field input, .text_field textarea {
+    height: 40px;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border: 1px solid var(--light-grey);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.text_field textarea {
+    height: 150px;
+    padding: 16px;
+    resize: none;
+}
+
+.button input {
+    text-align: center;
+}
+
+.social {
+    width: calc(100% - 32px);
+    display: flex;
+    justify-content: center;
+}
+
+.social a {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 16px 32px;
+}
+
+.tg {
+    background-image: url(../img/5109137_app_blue_chat_communication_message_icon.svg);
+}
+
+.inst {
+    background-image: url(../img/7857157_instagram_social\ media_photo_video_post_icon.svg);
+}
+
+.ds {
+    background-image: url(../img/7857187_discord_call_voip_message_community_icon.svg);
+}
+
+.copyright {
+    width: calc(100% - 32px);
+    text-align: center;
+    font-size: 17px;
+}
+
+#footer {
+    padding: 40px 0
+}
+
+.scrollTOP {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: url('../img/rocket.svg') center center / 100px auto no-repeat;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+}
+
+.buttonUp-open{
+    display: block;
+}
